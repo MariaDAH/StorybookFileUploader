@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --color-bg: #fff;
+  --color-border: #e5e7eb;
+  --color-sidebar-item: #f3f4f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body,
+body[data-theme="light"] {
+  --color-text-primary: #27201a;
+  --color-text-secondary: #076963;
+  --color-bg-primary: #fff;
+  --color-bg-secondary: #fff;
+  --color-bg-toggle: #1E90FF;
+}
+
+body[data-theme="dark"] {
+  --color-text-primary: #e3e3e3;
+  --color-text-secondary: #ff6b00;
+  --color-bg-primary: #15232d;
+  --color-bg-secondary: #434e56;
+  --color-bg-toggle: #a9a9a9;
+}
+
+body {
+  background: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: sans-serif;
+}
+
+h1 {
+  color: var(--color-text-secondary);
+}
+
+/**/
+
+.layout {
+  display: flex;
+  height: 100vh;
+  position: relative;
+  gap: 2rem;
+}
+
+.layout__main-content {
+  flex-grow: 1;
+}
+
+.tooltip.arrow-left::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -0.5rem;
+  margin-top: -0.25rem;
+  border-width: 0.25rem;
+  border-style: solid;
+  border-color: transparent #D4D4D8 transparent transparent;
+}
+
+
